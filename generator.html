@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Link Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 { color: #ff4d6d; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Fix padding issue */
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background: #d63353; }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff0f3;
+            border-radius: 8px;
+            display: none;
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #333;
+            margin-top: 10px;
+            font-size: 14px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>💖 Link Creator</h2>
+        <p>Enter her name below:</p>
+        <input type="text" id="nameInput" placeholder="e.g. Shraddha" onkeyup="if(event.key === 'Enter') generateLink()">
+        <button onclick="generateLink()">Get Link</button>
+        
+        <div id="result">
+            <p><strong>Send this link:</strong></p>
+            <a id="linkAnchor" href="#" target="_blank">...</a>
+            <button class="copy-btn" onclick="copyLink()">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script>
+        function generateLink() {
+            const name = document.getElementById('nameInput').value.trim();
+            if (!name) return alert("Please enter a name first!");
+            
+            // The base URL of your deployed site
+            const baseUrl = "https://thepunisher0.github.io/Just-For-Fun/";
+            
+            // create the final link
+            const finalLink = `${baseUrl}?name=${encodeURIComponent(name)}`;
+            
+            const resultDiv = document.getElementById('result');
+            const linkAnchor = document.getElementById('linkAnchor');
+            
+            linkAnchor.href = finalLink;
+            linkAnchor.innerText = finalLink;
+            resultDiv.style.display = 'block';
+        }
+
+        function copyLink() {
+            const linkText = document.getElementById('linkAnchor').href;
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert("Link copied! Now send it to her. 💌");
+            });
+        }
+    </script>
+</body>
+</html>

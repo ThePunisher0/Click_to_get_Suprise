@@ -5,32 +5,29 @@
 2. The website should open in your browser.
 3. Try adding `?name=YourName` to the end of the URL in the address bar (e.g., `file:///.../index.html?name=Nirali`) and press Enter to see the custom name.
 
-## Option 2: Share with the World (GitHub Pages)
-To send a link to someone, the site needs to be on the internet.
+## How to Share Your Link (GitHub Pages)
 
-1. **Create a GitHub Repository**:
-   - Go to [GitHub.com](https://github.com) and sign in.
-   - Click the **+** icon in the top right -> **New repository**.
-   - Name it (e.g., `my-valentine`).
-   - Check **"Add a README file"** (optional but helpful).
-   - Click **Create repository**.
+Since you have already pushed your code to GitHub, follow these final steps:
 
-2. **Upload Files**:
-   - In your new repository, click **Add file** -> **Upload files**.
-   - Drag and drop `index.html`, `style.css`, `script.js`, **`bear.gif`**, and **`hug.gif`** into the box.
-   - Click **Commit changes**.
+1.  **Go to your Repository Settings**:
+    - Open your repository page on GitHub: [https://github.com/ThePunisher0/Just-For-Fun](https://github.com/ThePunisher0/Just-For-Fun)
+    - Click on the **Settings** tab (top right of the repo menu).
 
-3. **Turn on GitHub Pages**:
-   - Go to the **Settings** tab of your repository.
-   - On the left sidebar, click **Pages**.
-   - Under **Build and deployment** / **Branch**, select `main` (or `master`) and click **Save**.
-   - Wait about 1-2 minutes. Refresh the page until you see a link like `https://yourusername.github.io/my-valentine/`.
+2.  **Enable GitHub Pages**:
+    - On the left sidebar, click **Pages** (under the "Code and automation" section).
+    - Under **Build and deployment** > **Branch**, click the dropdown that says "None".
+    - Select **master**.
+    - Click **Save**.
 
-4. **Send the Link**:
-   - Copy that link.
-   - Add `?name=Nirali` at the end.
-   - **Final Link Example**: `https://yourusername.github.io/my-valentine/?name=Nirali`
-   - Send this link on Instagram/WhatsApp!
+3.  **Get Your Link**:
+    - Refresh the page after about 1-2 minutes.
+    - You will see a banner at the top saying "Your site is live at..."
+    - The link will likely be: `https://ThePunisher0.github.io/Click_to_get_Suprise/`
+
+4.  **Share It**:
+    - Add `?name=Nirali` to the end.
+    - **Final Link**: `https://ThePunisher0.github.io/Click_to_get_Suprise/?name=Nirali`
+
 
 ## Option 3: Netlify Drop (Faster)
 1. Go to [Netlify Drop](https://app.netlify.com/drop).
